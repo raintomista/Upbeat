@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="stylesheets/core.css">
+		<link rel="icon" type="image/png" href="images/favicon.ico">
+		<!--link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'-->
+		<title>Delivery Information | Upbeat MERCHANDISE</title>
+	</head>
+	<body>
+		<script>
+		function notAvailable() 
+		{
+    		alert("This option is not available at the moment.");
+		}
+		</script>
+		<nav>
+			<div id="innerNav">
+				<div id="leftNav">
+					<div id="logo">
+						<a href="index.html">
+							<img src="images/logo.png">
+						</a>
+					</div>
+					<div id="navButtons">
+						<ul>
+							<a href="index.html">
+								<li>Home</li>
+							</a>
+							<a href="shop.html">
+								<li>Shop</li>
+							</a>
+							<a href="about-us.html">
+								<li>The Brand</li>
+							</a>
+							<a href="location.html">
+								<li>Find a Store</li>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div id="rightNav">
+					<div id="account">
+						<a href="login.html">
+							<div id="accountIcon">
+								<img src="images/guest-user.png">
+							</div>
+						</a>
+					</div>
+					<div id="viewCart">
+						<ul>
+							<a href="cart.html">
+								<li>View Cart</li>
+							</a>
+						</ul>
+					</div>
+					
+				</div>
+			</div>
+		</nav>
+		<div class="content">
+			<div id="delivery">
+				<div class="container">
+					<div>
+						<div id="delivery-container">
+							<h1>DELIVERY INFORMATION</h1>
+							<h2>PLEASE FILL OUT THE FOLLOWING FORMS</h2>
+							<div id="delivery-ctrl">
+								<form name="delivery" action="confirmation.html" method="submit" accept-charset="utf-8">
+									<label style="width: 610px; margin-right: 5px;">
+										<span>BILLING ADDRESS</span>
+										<input type="text" placeholder="UNIT/HOUSE #, BUILDING NAME, STREET NAME, VILLAGE/COMPOUND, CITY, PROVINCE" required class="infobox" autocomplete="on" style="width: 590px; margin-top: 3px;"/>
+									</label>
+									<label style="width: 310px; margin-right: 5px; margin-top: 10px;">
+										<span>CONTACT NUMBER</span>
+										<input type="text" placeholder="(+63) 987 654 3210" required class="infobox" autocomplete="on" style="width: 290px; margin-top: 3px;" maxlength="18" />
+									</label>
+									<label style="width: 20px; margin-right: 5px; margin-top: 10px;">
+										<span>COUNTRY</span>
+										<input type="text" value="philippines" required class="infobox" autocomplete="on" style="width: 275px; margin-top: 3px;" disabled />
+									</label>
+									<label style="width: 610px; margin-top: 10px;" id="test">
+										<span>DELIVERY OPTIONS</span>
+										<label>
+											<input type="radio" name="option" id="billing" required checked />
+											SHIP TO BILLING ADDRESS
+										</label>
+										<label>
+											<input type="radio" name="option" id="shp-dff"/>
+											SHIP TO DIFFERENT ADDRESS
+											<input type="text" placeholder="UNIT/HOUSE #, BUILDING NAME, STREET NAME, VILLAGE/COMPOUND, CITY, PROVINCE" class="infobox-dynamic" autocomplete="on" style="width: 558px; margin-top: 3px; margin-left: 22px;" id="shp-dff-input" />
+										</label>
+										<label id="gift"  style="margin-top: 10px;">
+											<input type="radio" id="shp-gift" name="option"/>
+											SHIP TO ANOTHER PERSON
+											<div id="send">
+												<input type="text" placeholder="RECEIVER'S NAME (E.G. MARY JOY GREFALDO)"class="infobox-dynamic" autocomplete="on" style="width: 330px; margin-top: 3px; margin-left: 22px" id="shp-gift-input"/>
+												<input type="text" placeholder="RELATIONSHIP (E.G. CRUSH)" class="infobox-dynamic" autocomplete="on" style="width: 205px; margin-top: 3px;"/>
+												<input type="text" placeholder="UNIT/HOUSE #, BUILDING NAME, STREET NAME, VILLAGE/COMPOUND, CITY, PROVINCE" class="infobox-dynamic" autocomplete="on" style="width: 558px; margin-top: 3px; margin-left: 22px;"/>
+											</div>
+											
+										</label>
+									</label>
+								</label>
+								<label style="width: 610px; margin-right: 5px; margin-top: 10px;" id="courier">
+									<span>DELIVERY COURIER</span>
+									<div>
+										<label style="margin-left: 5px; margin-top: 5px;">
+											<input type="radio" name="courier" value="lbc" id="lbc" checked/>
+											<img src="images/courier/lbc.png">
+										</label>
+										<label style="margin-left: 5px; margin-top: 5px;">
+											<input type="radio" name="courier" value="xend" id="xend"/>
+											<img src="images/courier/xend.png">
+										</label>
+										<label style="margin-left: 5px; margin-top: 5px;">
+											<input type="radio" name="courier" value="jrs" id="jrs"/>
+											<img src="images/courier/jrs.png">
+										</label>
+									</div>
+								</label>
+								<label style="width: 610px; margin-right: 5px; margin-top: 10px;" id="payment">
+									<span>PAYMENT METHOD</span>
+									<div>
+										<label style="margin-left: 5px; margin-top: 5px;">
+											<input type="radio" name="payment" value="lbc" id="cod" checked />
+											<img src="images/payment/COD.png">
+										</label>
+										<label style="margin-left: 5px; margin-top: 5px;">
+											<input type="radio" name="payment" value="mastercard" id="mastercard" disabled/>
+											<img src="images/payment/MC.png" onclick="notAvailable()">
+										</label>
+										<label style="margin-left: 5px; margin-top: 10px;">
+											<input type="radio" name="payment" value="visa" id="visa"  disabled />
+											<img src="images/payment/visa.png" onclick="notAvailable()">
+										</label>
+										
+									</div>
+								</label>
+								<div id="login-button" >
+									<input type="submit" value="PROCEED" style="margin-top:20px;"/>
+								</div>
+							</form>
+						</div>
+						
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	<div id="footer">
+		<div id="innerFooter">
+			<div id="upperFooter">
+				<div id="social-media">
+					<div id="inner-social">
+						<a href="http://facebook.com/upbeatmerchandise"><img src="images/fb.png"></a>
+						<a href="http://twitter.com/upbeatmerchandise"><img src="images/twtr.png"></a>
+						<a href="http://instagram.com/upbeatmerchandise"><img src="images/ig.png"></a>
+					</div>
+				</div>
+				<div id="projectQ">
+					<img src="images/project-q.png">
+				</div>
+			</div>
+			<div id="copyright">
+				COPYRIGHT &copy; 2015 UPBEAT MERCHANDISE. &nbsp;&nbsp;ALL RIGHTS RESERVED.
+			</div>
+			<div id="footer-links">
+				<a href="about-us.html">ABOUT US</a> |
+				<a href="contact-us.html">CONTACT US</a> |
+				<a href="location.html">STORE LOCATION</a> |
+				<a href="devteam.html">DEV TEAM</a> |
+				<a href="credits.html">CREDITS</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
